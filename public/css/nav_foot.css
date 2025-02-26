@@ -1,0 +1,157 @@
+/* Main Nav-Bar*/
+
+.navbar-nav .nav-item {
+    padding: 10px;
+    
+}
+
+.navbar-nav .nav-item a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #007BFF;
+}
+
+.navbar-brand img {
+    max-height: 100px;
+    margin-right: 15px;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+}
+
+.custom-navbar-color {
+    background-color: #073763 !important;
+    max-height: auto;
+    
+}
+
+.navbar-nav .nav-item {
+    padding: 10px;
+    transition: transform 0.2s;
+    font-weight: bold;
+    
+}
+
+.navbar-nav .nav-item a:hover {
+    color: #007BFF;
+    transform: scale(1.1);
+}
+
+ .social-icons {
+            margin-top: 20px;
+            text-align: middle;
+        }
+
+ .social-icons a {
+            color: #ccc;
+            font-size: 24px;
+            margin: 0 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+ .social-icons a:hover {
+            color: #007BFF;
+        }
+
+        .space-after-section {
+            margin-bottom: 30px;
+        }
+
+/* Sectiion 1 */
+
+ .section-1 {
+            background-color: #5a5555;
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-bottom: 12px;
+        }
+        
+/* Footer */
+
+        footer {
+            background-color: #5a5555;
+            margin-top: 20px;
+            padding: 50px 0;
+            height: auto;
+            width: auto;
+        }
+
+        .footer-section {
+            text-align: left;
+            margin-bottom: 20px;
+            color: #fff;
+             font-size: 20px;
+        }
+
+        .footer-section h5 {
+            color: #fff;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 5px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: #007BFF;
+        }
+
+        .footer-text {
+            color: white; 
+            margin-top: 15px; 
+            font-size: 14px;
+            }
+
+
+/* Essential Links color */
+.contact-details a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
+    color: #007BFF;
+}
+
+ /* Contact Details */
+ .contact-details i {
+    font-size: 24px;
+    color: #007BFF;
+    margin-right: 10px;
+}
+
+.contact-details p {
+    color: #ccc;
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+ /* Copyright */
+        .copyright {
+            color: #ccc;
+            font-size: 18px;
+            text-align: right;
+        }
+
+        .copyright i {
+            font-size: 18px;
+            text-align: right;
+            color: #007BFF;
+            margin-right: 5px;
+        }
+
