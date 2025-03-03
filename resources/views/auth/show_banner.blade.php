@@ -347,13 +347,13 @@
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav">
             <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_test') }}">Test</a>
+                    <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_package') }}">Our Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctor</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_gallery') }}">Gallery</a>
@@ -517,14 +517,14 @@
                 <div class="card job-card">
                     <div class="card-body">
                         <img src="uploads/others/image_c.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
-                        <h4 class="card-title text-center font-weight-bold">Managing Director</h4>
+                        <h4 class="card-title text-center font-weight-bold">Chairman & Proprietor</h4>
                         <br>
                         <p class="card-text">Dear Patients and Visitors,</p>
-                        <p class="card-text">Welcome to the Sandhani Clinic and Diagnostic Complex. As Managing Director, I am honored to head a dedicated team committed to providing great healthcare services. Our clinic combines cutting-edge diagnostic technology with compassionate care to ensure that each patient receives accurate, quick findings.</p>
+                        <p class="card-text">Welcome to the Sandhani Clinic and Diagnostic Complex. As Chairman & Proprietor, I am honored to head a dedicated team committed to providing great healthcare services. Our clinic combines cutting-edge diagnostic technology with compassionate care to ensure that each patient receives accurate, quick findings.</p>
                         <p class="card-text">We priorities your well-being and seek to create a friendly workplace in which you feel respected and informed. Whether you come in for basic treatment or a more difficult issue, we are here to help you with professionalism and sensitivity. Thank you for entrusting us with your health.</p>
                         <p class="card-text">Best regards,</p>
                         <p class="card-text">Mrs. Zohra Baker</p>
-                        <p class="card-text">Managing Director</p>
+                        <p class="card-text">Chairman & Proprietor</p>
                         <p class="card-text">Sandhani Clinic & Diagnostic Complex.</p>
                     </div>
                 </div>
@@ -534,14 +534,14 @@
             <div class="card job-card">
                 <div class="card-body">
                     <img src="uploads/others/image_a.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
-                    <h4 class="card-title text-center font-weight-bold">Managing Director of Diagnostic Wing</h4>
+                    <h4 class="card-title text-center font-weight-bold">Managing Director</h4>
                     <br>
                     <p class="card-text">Dear Patients and Visitors,</p>
-                    <p class="card-text">Welcome to the Diagnostic Wing of Sandhani Clinic & Diagnostic Complex. As Director, I am committed to ensuring you receive the most accurate and timely diagnostic services available. Our state-of-the-art technology and expert team are here to support your health journey with precision, dedication, and care.</p>
-                    <p class="card-text">We understand that diagnostic tests can be challenging, and our goal is to make your experience as comfortable and stress-free as possible. We strive to provide the highest standard of care and unwavering support throughout your process. Thank you for trusting us with your care.</p>
+                    <p class="card-text">Welcome to the Sandhani Clinic & Diagnostic Complex. As Managing Director, I am committed to ensuring that you receive the most accurate and timely diagnostic services available. Our state-of-the-art technology and expert team are here to support your health journey with precision, dedication and care.</p>
+                    <p class="card-text">We know that diagnostic tests can be challenging, and our goal is to make your experience as comfortable as possible. We strive to provide the highest standard of care and unwavering support throughout your process. Thank you for trusting us with your care.</p>
                     <p class="card-text">Sincerely,</p>
                     <p class="card-text">Dr. Nayem Baker</p>
-                    <p class="card-text">Director, Diagnostic Wing</p>
+                    <p class="card-text">Managing Director</p>
                     <p class="card-text">Sandhani Clinic & Diagnostic Complex.</p>
                 </div>
             </div>
@@ -551,14 +551,14 @@
             <div class="card job-card">
                 <div class="card-body">
                     <img src="uploads/others/image_b.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
-                    <h4 class="card-title text-center font-weight-bold">Managing Director of Clinic Wing</h4>
+                    <h4 class="card-title text-center font-weight-bold">CEO</h4>
                     <br>
                     <p class="card-text">Dear Patients and Visitors,</p>
-                    <p class="card-text">Welcome to the Clinic Wing of Sandhani Clinic & Diagnostic Complex. As Director, I am honored to lead a dedicated team committed to providing you with compassionate, high-quality care. Our focus is on delivering personalized healthcare services tailored to your needs, ensuring that every visit is a positive experience.</p>
+                    <p class="card-text">Welcome to the Sandhani Clinic & Diagnostic Complex. As CEO, I am honored to lead a dedicated team committed to providing you with compassionate, high-quality care. Our focus is on delivering personalized healthcare services tailored to your needs, ensuring that every visit is a positive experience.</p>
                     <p class="card-text">At Sandhani Clinic & Diagnostic Complex, your health and well-being are our top priorities. We strive to create a welcoming environment where you feel supported and understood. Thank you for trusting us with your care.</p>
                     <p class="card-text">Sincerely,</p>
                     <p class="card-text">Dr. Arman Baker</p>
-                    <p class="card-text">Director, Clinic Wing</p>
+                    <p class="card-text">CEO</p>
                     <p class="card-text">Sandhani Clinic & Diagnostic Complex.</p>
                 </div>
             </div>
@@ -572,7 +572,7 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="uploads/others/image_d.jpg" alt="story" class="img-fluid rounded-hover ">
+            <img src="uploads/others/sandhani_front.jpg" alt="story" class="img-fluid rounded-hover ">
         </div>
         <div class="col-md-6">
             <div class="card job-card">

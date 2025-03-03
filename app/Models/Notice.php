@@ -11,7 +11,9 @@ class Notice extends Model
     protected $fillable = [
         'des_a',
         'des_b',
-        'deleted_by'
+        'deleted_by',
+        'created_by',
+        
     ];
     
     public function deletedByAdmin()

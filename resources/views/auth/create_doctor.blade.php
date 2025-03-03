@@ -100,7 +100,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="symptom">Symptom</label>
+                            <label for="symptom">Designation</label>
                             <input type="text" name="symptom" id="symptom" class="form-control">
                         </div>
 

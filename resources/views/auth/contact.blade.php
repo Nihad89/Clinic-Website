@@ -159,13 +159,13 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/show_test') }}">Test</a>
+                        <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/show_package') }}">Our Packages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/show_doctor') }}">Doctor</a>
+                        <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/show_gallery') }}">Gallery</a>
@@ -192,17 +192,12 @@
                     <h4>Contact Us</h4>
                 </div>
                 <div class="card-body">
-                <div class="contact-card mb-4">
-                            <i class="fas fa-headset"></i>
-                            <h5>Clinic Reception</h5>
-                            <p><strong>Md. Zakir Hossain</strong> Admin Manager (Clinic) <strong>+8801329649138</strong> </p>
-                            <p><strong>Sohel Akond</strong> Receptionist <strong>+8801329649115</strong></p>
-                        </div>
+
                         <div class="contact-card mb-4">
                             <i class="fa-solid fa-hospital-user"></i>
                             <h5>Information and Patient Care</h5>
-                            <p><strong>Executive</strong><strong>09611871872</strong></p>
-                            <p><strong>Sk. Tanjir Alam</strong> Supevisor<strong>01329649122</strong></p>
+                            <p><strong>Executive</strong> <strong>09611871872</strong></p>
+                            <p><strong>Sk. Tanjir Alam</strong> Supevisor <strong>01329649122</strong></p>
                         </div>
 
 
@@ -210,7 +205,14 @@
                             <i class="fa-solid fa-microscope"></i>
                             <h5>Pathology Reception</h5>
                             <p><strong>Sandhani Reception</strong><strong> 01329649114</strong></p>
-                            <p><strong>Abdul Aziz</strong> Marketing Executive <strong>01951851565</strong></p>
+                            <p><strong>Sk. Mohidul Islam</strong> Manager <strong>01329649106</strong></p>
+                        </div>
+
+                        <div class="contact-card mb-4">
+                            <i class="fas fa-headset"></i>
+                            <h5>Clinic Reception</h5>
+                            <p><strong>Md. Zakir Hossain</strong> Admin Manager (Clinic) <strong>+8801329649138</strong> </p>
+                            <p><strong>Sohel Akond</strong> Receptionist <strong>+8801329649115</strong></p>
                         </div>
 
                         <div class="contact-card mb-4">

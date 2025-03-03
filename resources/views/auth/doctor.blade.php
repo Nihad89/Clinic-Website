@@ -38,9 +38,9 @@
         }
         .card-img-top {
             width: 100%;
-            height: auto; 
+            height: 300px; 
             object-fit: cover; 
-            transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+            transition: transform 0.3s ease-in-out; /* hover effect */
         }
         .card-img-top:hover {
             transform: scale(1.1); /* Scales the image slightly on hover */
@@ -69,6 +69,7 @@
             border-color: #007BFF;
             box-shadow: none;
         }
+        
 
         .profile-actions .btn {
             width: 45%;
@@ -86,12 +87,12 @@
         }
 
         .custom-navbar {
-            background-color: #c3e0ff; /* Replace with your desired color */
+            background-color: #c3e0ff; /* color */
         
         }
         
         .navbar-toggler {
-            border-color: #ffffff; /* Adjust if needed */
+            border-color: #ffffff;
         }
 
         .navbar-nav .nav-item a {
@@ -180,13 +181,8 @@
                 <input type="text" id="nameFilter" class="form-control" onkeyup="filterCards()">
             </div>
         </div>
+
         <div class="col-md-6">
-            <div class="form-group">
-                <label for="symptomFilter">Search by Symptom:</label>
-                <input type="text" id="symptomFilter" class="form-control" onkeyup="filterCards()">
-            </div>
-        </div>
-        <div class="col-md-8 mx-auto">
             <div class="form-group">
                 <label for="specialityFilter">Search by Specialty:</label>
                 <select id="specialityFilter" class="form-control" onchange="filterCards()">
@@ -208,7 +204,7 @@
                     <h5 class="card-title">{{ $item->name }}</h5>
                     <p class="card-text"><strong>Specialty:</strong> {{ $item->specialty }}</p>
                     <p class="card-text"><strong>Degree:</strong> {{ $item->degree }}</p>
-                    <p class="card-text"><strong>Symptom:</strong> {{ $item->symptom }}</p>
+                    <p class="card-text"><strong>Designation:</strong> {{ $item->symptom }}</p>
                     <p class="card-text"><strong>Visiting Days:</strong> {{ $item->day }}</p>
                     <p class="card-text"><strong>Visiting Hours:</strong> {{ $item->time }}</p>
                     <p class="card-text"><strong>Call for Appointment:</strong> {{ $item->phone }}</p>
@@ -251,22 +247,18 @@
 
             <!-- Contact Details Section -->
             <div class="col-md-4 footer-section">
-                <h5 style="color: #fff; font-size: 24px; margin-bottom: 20px;">Contact Details</h5>
+                <h5>Contact Informations</h5>
                 <div class="contact-details">
-                    <p><i class="fas fa-map-marker-alt" style="color: #5ab5fa;" ></i> 123 Main St, City</p>
-                    <p><i class="fas fa-phone" style="color: #5ab5fa;" ></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope" style="color: #5ab5fa;" ></i> example@example.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: #5ab5fa;" ></i> Location: 58, Babu Khan Road, Khulna, Bangladesh.</p>
+                    <p><i class="fas fa-phone" style="color: #5ab5fa;" ></i> +8809611871872</p>
+                    <p><i class="fas fa-envelope" style="color: #5ab5fa;" ></i> sandhani.clinic.khulna@gmail.com</p>
                 </div>
             </div>
 
             <!-- Copyright Section -->
             <div class="col-md-4 footer-section"style="text-align: right;">
                 <div class="copyright">
-                    &copy; 2023 Your Company Name
-                </div>
-                <div class="footer-text" style="color: white; margin-top: 15px; font-size: 14px;">
-                    <p>Developed by Abu Saleh Akash.</p>
-                    
+                    &copy; 2023 Sandhani Clinic & Diagnostic Complex
                 </div>
             </div>
         </div>
@@ -293,7 +285,6 @@
 
     function filterCards() {
         var nameInput = document.getElementById("nameFilter").value.toUpperCase();
-        var symptomInput = document.getElementById("symptomFilter").value.toUpperCase();
         var specialityInput = document.getElementById("specialityFilter").value.toUpperCase();
 
         var cards = document.querySelectorAll(".doctor-card");
@@ -304,7 +295,6 @@
             var specialityText = card.querySelector(".card-text").textContent.split(": ")[1].toUpperCase();
 
             if ((nameInput === "" || cardTitle.indexOf(nameInput) > -1) &&
-                (symptomInput === "" || cardText.indexOf(symptomInput) > -1) &&
                 (specialityInput === "" || specialityText.indexOf(specialityInput) > -1)) {
                 card.style.display = "flex";
             } else {
@@ -313,7 +303,7 @@
         });
 
         // Show all cards if all filters are cleared
-        if (nameInput === "" && symptomInput === "" && specialityInput === "") {
+        if (nameInput === "" && specialityInput === "") {
             cards.forEach(function(card) {
                 card.style.display = "flex";
             });

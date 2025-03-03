@@ -144,7 +144,7 @@
             <div class="custom-card">
                 <div class="card-body">
                     <div class="row">
-                        @foreach ($notice as $item)
+                        @foreach ($notices as $item)
                             <div class="col-md-4 mb-4">
                                 <div class="card custom-card">
                                     <div class="card-body">
@@ -152,7 +152,7 @@
                                         <p class="card-text">{{ $item->des_b }}</p>
                                     </div>
                                     <div class="card-footer">
-                                        <form action="{{ url('delete-notice/'.$item->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this notice?')">
+                                        <form action="{{ url('delete-notice/'.$item->id) }}" method="POST" onsubmit="console.log('Deleted by:', {{ Auth::id() }}); return confirm('Are you sure you want to delete this notice?')">
                                             @csrf
                                             @method('DELETE')
                                             <input type="hidden" name="deleted_by" value="{{ Auth::id() }}"> <!-- Track admin ID -->
@@ -168,9 +168,6 @@
         </div>
     </div>
 </div>
-
-
-
 
 
 <!-- Footer -->
@@ -192,24 +189,19 @@
 
             <!-- Contact Details Section -->
             <div class="col-md-4 footer-section">
-                <h5 style="color: #fff; font-size: 24px; margin-bottom: 20px;">Contact Details</h5>
+                <h5>Contact Informations</h5>
                 <div class="contact-details">
-                    <p><i class="fas fa-map-marker-alt" style="color: #5ab5fa;" ></i> 123 Main St, City</p>
-                    <p><i class="fas fa-phone" style="color: #5ab5fa;" ></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope" style="color: #5ab5fa;" ></i> example@example.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: #5ab5fa;" ></i> Location: 58, Babu Khan Road, Khulna, Bangladesh.</p>
+                    <p><i class="fas fa-phone" style="color: #5ab5fa;" ></i> +8809611871872</p>
+                    <p><i class="fas fa-envelope" style="color: #5ab5fa;" ></i> sandhani.clinic.khulna@gmail.com</p>
                 </div>
             </div>
 
             <!-- Copyright Section -->
             <div class="col-md-4 footer-section"style="text-align: right;">
                 <div class="copyright">
-                    &copy; 2023 Your Company Name
+                    &copy; 2023 Sandhani Clinic & Diagnostic Complex
                 </div>
-                <div class="footer-text" style="color: white; margin-top: 15px; font-size: 14px;">
-                    <p>Developed by Abu Saleh Akash.</p>
-                    
-                </div>
-            </div>
         </div>
     </div>
 </footer>

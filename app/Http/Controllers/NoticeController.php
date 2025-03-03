@@ -1,112 +1,154 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\AuditLog;
 use App\Models\Notice;
+use App\Models\NoticeLog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-
 class NoticeController extends Controller
 {
+    // Show all notices
     public function show()
     {
-        $notice = Notice::all();
-        return view('auth.show_notice', compact('notice'));
+        $notices = Notice::all();
+        return view('auth.show_notice', compact('notices'));
     }
 
+    public function auditshow()
+    {
+        $deletedNotices = AuditLog::with('user')->get();
+        return view('auth.deleted_notices', compact('deletedNotices'));
+    }
+
+    // Display the notice index page
     public function index()
     {
-        $notice = Notice::all();
-        return view('auth.notice', compact('notice'));
+        $notices = Notice::all();
+        return view('auth.notice', compact('notices'));
     }
 
+    // Show the create notice form
     public function create()
     {
         return view('auth.create_notice');
     }
 
+    // Store a new notice
     public function store(Request $request)
     {
-        $notice = new Notice;
-        $notice->des_a = $request->input('des_a');
-        $notice->des_b = $request->input('des_b');
-        $notice->save();
-
+        $request->validate([
+            'des_a' => 'required|string|max:255',
+            'des_b' => 'required|string|max:255',
+        ]);
+    
+        Notice::create([
+            'des_a' => $request->input('des_a'),
+            'des_b' => $request->input('des_b'),
+            'created_by' => Auth::id(), // Set the created_by column
+        ]);
+    
         return redirect()->back()->with('status', 'Notice Added Successfully');
     }
-
-
+    
+    // Delete a notice and log it
     public function destroy($id)
     {
+        // Debugging: Confirm the method is being called
+        \Log::info("Destroy method called for notice ID: $id");
+    
         $notice = Notice::findOrFail($id);
     
-        // Check if admin is authenticated
+        // Debugging: Confirm the notice is found
+        \Log::info("Notice found", ['notice' => $notice]);
+    
         if (!Auth::check()) {
+            \Log::warning("User not authenticated");
             return redirect()->back()->with('error', 'You need to be logged in to perform this action');
         }
     
-        // Log for debugging - check if Auth::id() and notice data are available
-        logger()->info('Deleting notice', [
-            'notice_id' => $notice->id, 
-            'admin_id' => Auth::id(),
-            'notice_data' => $notice
-        ]);
+        try {
+            // Debugging: Confirm the user is authenticated
+            \Log::info("User authenticated", ['user_id' => Auth::id()]);
     
-        // Log the deletion in the Audit Log table
-        $log = AuditLog::create([
-            'notice_id' => $notice->id,
-            'des_a' => $notice->des_a,
-            'des_b' => $notice->des_b,
-            'deleted_by' => Auth::id(),
-            'deleted_at' => now(),
-        ]);
+            // Check if there are already 10 logs
+            $logCount = NoticeLog::count();
+            \Log::info("Current log count", ['log_count' => $logCount]);
     
-        // Check if the log was created successfully
-        if ($log) {
-            logger()->info('Audit Log Created:', ['log' => $log]);
-        } else {
-            logger()->error('Failed to create audit log');
+            if ($logCount >= 10) {
+                // Delete the oldest log
+                $oldestLog = NoticeLog::orderBy('created_at', 'asc')->first();
+                if ($oldestLog) {
+                    \Log::info("Deleting oldest log", ['oldest_log' => $oldestLog]);
+                    $oldestLog->delete();
+                }
+            }
+    
+            // Store deleted notice information in NoticeLog
+            $noticeLogData = [
+                'notice_id' => $notice->id,
+                'des_a' => $notice->des_a,
+                'des_b' => $notice->des_b,
+                'created_by' => $notice->created_by, // Include the creator's ID
+                'deleted_by' => Auth::id(), // Include the deleter's ID
+                'deleted_at' => now(),
+            ];
+    
+            // Debugging: Confirm the data to be logged
+            \Log::info("Notice log data", ['notice_log_data' => $noticeLogData]);
+    
+            // Create a new log entry in the notice_logs table
+            $noticeLog = NoticeLog::create($noticeLogData);
+    
+            // Debugging: Confirm the log was created
+            \Log::info("Notice log created", ['notice_log' => $noticeLog]);
+    
+            // Now, delete the notice from the notices table
+            $notice->delete();
+    
+            // Debugging: Confirm the notice was deleted
+            \Log::info("Notice deleted successfully", ['notice' => $notice]);
+    
+            return redirect()->back()->with('status', 'Notice Deleted and Logged Successfully');
+        } catch (\Exception $e) {
+            // Debugging: Log the error
+            \Log::error("Error logging deletion: " . $e->getMessage(), ['exception' => $e]);
+            return redirect()->back()->with('error', 'Error logging deletion');
         }
-    
-        // Delete the notice
-        $notice->delete();
-    
-        return redirect()->back()->with('status', 'Notice Deleted Successfully');
     }
 
-
-public function deleteNotice($id)
-{
-    // Retrieve the notice
-    $notice = Notice::findOrFail($id);
-
-    // Log the deletion in the audit_log table
-    AuditLog::create([
-        'notice_id' => $notice->id,
-        'des_a' => $notice->des_a,
-        'des_b' => $notice->des_b,
-        'deleted_by' => Auth::id(), // ID of the admin performing the action
-        'deleted_at' => now(),     // Log the timestamp
-    ]);
-
-    // Delete the notice from the notices table
-    $notice->delete();
-
-    return redirect()->back()->with('success', 'Notice deleted and logged successfully.');
-}
-
-
+    // Show deleted notices from the notice logs
     public function showDeletedNotices()
-    {
-        // Fetch all audit logs along with the admin who deleted the notice
-        $deletedNotices = AuditLog::with('user')->get();
-    
-        // Check if data is retrieved
-        logger()->info('Fetched Deleted Notices:', ['deletedNotices' => $deletedNotices]);
-    
-        return view('auth.deleted_notices', compact('deletedNotices'));
+{
+    try {
+        // Fetch the last 10 deleted notices with creator and deleter information
+        $deletedNotices = NoticeLog::with(['creator', 'deleter'])
+            ->orderBy('deleted_at', 'desc')
+            ->take(10)
+            ->get();
+
+        // Count the number of notices deleted by the current admin
+        $currentAdminDeletedCount = NoticeLog::where('deleted_by', Auth::id())->count();
+
+        // Debugging: Confirm the count is correct
+        \Log::info("Current admin deleted count", ['count' => $currentAdminDeletedCount]);
+
+        if ($deletedNotices->isEmpty()) {
+            \Log::info("No deleted notices found in NoticeLog.");
+        } else {
+            \Log::info("Deleted notices retrieved successfully.", ['notices' => $deletedNotices]);
+        }
+
+        // Pass the variables to the view
+        return view('auth.deleted_notices', [
+            'deletedNotices' => $deletedNotices,
+            'currentAdminDeletedCount' => $currentAdminDeletedCount,
+        ]);
+    } catch (\Exception $e) {
+        \Log::error("Error retrieving deleted notices: " . $e->getMessage());
+        return redirect()->back()->with('error', 'Error fetching deleted notices.');
     }
 }
-
-
+}

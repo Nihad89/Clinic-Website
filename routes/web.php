@@ -33,6 +33,7 @@ Route::get('show_package', [PackageController::class, 'show']);
 Route::get('show_doctor', [DoctorController::class, 'show']);
 Route::get('show_gallery', [GalleryController::class, 'show']);
 Route::get('show_notice', [NoticeController::class, 'show']);
+Route::get('delated_notices', [NoticeController::class, 'auditshow']);
 Route::get('about', [BannerController::class, 'about_us']);
 Route::get('contact', [BannerController::class, 'contact_us']);
 
@@ -55,12 +56,10 @@ Route::middleware('auth')->group(function () {
 Route::get('notice', [NoticeController::class, 'index']);
 Route::get('add-notice', [NoticeController::class, 'create']);
 Route::post('add-notice', [NoticeController::class, 'store']);
-Route::delete('delete-notice/{id}', [NoticeController::class, 'destroy']);
+Route::delete('delete-notice/{id}', [NoticeController::class, 'destroy'])->name('delete.notice');
+Route::get('deleted-notices', [NoticeController::class, 'showDeletedNotices'])->name('deleted.notices');
 
 
-
-
-Route::get('deleted_notices', [NoticeController::class, 'showDeletedNotices']);
 
 // BANNER
 

@@ -6,19 +6,64 @@
         /* Button styles */
         .btn {
             display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
+            padding: 12px 24px;
+            background: linear-gradient(45deg, #6a11cb, #2575fc);
+            color: white;
             text-decoration: none;
             border: none;
-            border-radius: 5px;
+            border-radius: 30px;
             cursor: pointer;
             margin-right: 10px;
-            transition: background-color 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+            border-radius: 50%;
         }
 
         .btn:hover {
-            background-color: #0056b3;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            animation: pulse 0.5s infinite;
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover::before {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
         }
 
         /* Dashboard container styles */
@@ -50,71 +95,49 @@
         .btn-container {
             margin-top: 20px;
         }
-
-        /* Interactive button animations */
-        .btn-illusion:hover {
-            animation: pulse 0.5s infinite;
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
     </style>
     <title>Dashboard</title>
 </head>
 
 <body>
     <x-app-layout>
-        
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
                 <div class="dashboard-container">
                     <p class="dashboard-heading">{{ __("Welcome to Your Dashboard!") }}</p>
                     <p class="dashboard-subheading">{{ __("You're logged in!") }}</p>
 
                     <div class="btn-container">
-                        <a href="{{ url('/doctor') }}" class="btn btn-illusion">DOCTOR PORTAL</a>
-                        <a href="{{ url('/test') }}" class="btn btn-illusion">TEST PORTAL</a>
-                        <a href="{{ url('/package') }}" class="btn btn-illusion">PACKAGE PORTAL</a>
-                        <a href="{{ url('/banner') }}" class="btn btn-illusion">BANNER PORTAL</a>
-                        <a href="{{ url('/gallery') }}" class="btn btn-illusion">GALLERY</a>
-                        <a href="{{ url('/notice') }}" class="btn btn-illusion">NOTICE</a>
-                        <a href="{{ url('/job') }}" class="btn btn-illusion">CAREER PORTAL</a>
+                        <a href="{{ url('/doctor') }}" class="btn">DOCTOR PORTAL</a>
+                        <a href="{{ url('/test') }}" class="btn">TEST PORTAL</a>
+                        <a href="{{ url('/package') }}" class="btn">PACKAGE PORTAL</a>
+                        <a href="{{ url('/banner') }}" class="btn">BANNER PORTAL</a>
+                        <a href="{{ url('/gallery') }}" class="btn">GALLERY</a>
+                        <a href="{{ url('/notice') }}" class="btn">NOTICE</a>
+                        <a href="{{ url('/job') }}" class="btn">CAREER PORTAL</a>
+                        <a href="{{ url('/delated_notices') }}" class="btn">ADMIN INFO</a>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="py-12">
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="max-w-8xl mx-auto sm:px-6 lg:px-8">
                 <div class="dashboard-container">
                     <p class="dashboard-heading">{{ __("All The View Pages Are Here!") }}</p>
-                    
 
                     <div class="btn-container">
-                    <a href="{{ url('/') }}" class="btn btn-illusion">LANDING PAGE</a>
-                        <a href="{{ url('/show_doctor') }}" class="btn btn-illusion">VIEW DOCTOR</a>
-                        <a href="{{ url('/show_test') }}" class="btn btn-illusion">VIEW TEST </a>
-                        <a href="{{ url('/show_package') }}" class="btn btn-illusion">VIEW PACKAGE </a>
-                        <a href="{{ url('/show_gallery') }}" class="btn btn-illusion">VIEW GALLERY</a>
-                        <a href="{{ url('/show_notice') }}" class="btn btn-illusion">VIEW NOTICE</a>
-                        <a href="{{ url('/show_job') }}" class="btn btn-illusion">VIEW CAREER </a>
+                        <a href="{{ url('/') }}" class="btn">LANDING PAGE</a>
+                        <a href="{{ url('/show_doctor') }}" class="btn">VIEW DOCTOR</a>
+                        <a href="{{ url('/show_test') }}" class="btn">VIEW TEST</a>
+                        <a href="{{ url('/show_package') }}" class="btn">VIEW PACKAGE</a>
+                        <a href="{{ url('/show_gallery') }}" class="btn">VIEW GALLERY</a>
+                        <a href="{{ url('/show_notice') }}" class="btn">VIEW NOTICE</a>
+                        <a href="{{ url('/show_job') }}" class="btn">VIEW CAREER</a>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </x-app-layout>
 </body>
 

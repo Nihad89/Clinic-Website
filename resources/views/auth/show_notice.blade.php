@@ -138,13 +138,13 @@
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
             <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_test') }}">Test</a>
+                    <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_package') }}">Our Packages</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctor</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_gallery') }}">Gallery</a>
@@ -173,9 +173,9 @@
                     <h4>Notice</h4>
                 </div>
                 <div class="card-body">
-                    @if(count($notice) > 0)
+                    @if(count($notices) > 0)
                         <div class="row">
-                            @foreach ($notice as $item)
+                            @foreach ($notices as $item)
                                 <div class="col-md-4">
                                     <div class="image-card">
                                         <h5>{{ $item->des_a }}</h5>

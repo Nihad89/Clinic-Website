@@ -209,13 +209,13 @@
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/show_test') }}">Test</a>
+                        <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/show_package') }}">Our Packages</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/show_doctor') }}">Doctor</a>
+                        <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/show_gallery') }}">Gallery</a>
@@ -251,9 +251,9 @@
 
                         <h4>🔬 Diagnostic Services</h4>
                         
-                            <P><strong>Laboratory Testing:</strong> Comprehensive blood tests, urinalysis, and more.</P>
+                            <P><strong>Laboratory Investigations:</strong> Comprehensive blood tests, urinalysis, and more.</P>
                             <P><strong>Imaging:</strong> X-rays, ultrasounds, and CT scans to help diagnose and monitor conditions.</P>
-                            <P><strong>Cardiac Tests:</strong> ECG, ECHO, and other assessments to evaluate heart health.</P>
+                            <P><strong>Cardiac Investigationss:</strong> ECG, ECHO, and other assessments to evaluate heart health.</P>
                         
 
                         <h4>🏥 Clinical Services</h4>

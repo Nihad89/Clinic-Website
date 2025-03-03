@@ -351,7 +351,7 @@ border-bottom: 1px solid #e0e0e0;
         <div class="collapse navbar-collapse" id="mainNavbar">
             <ul class="navbar-nav">
             <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_test') }}">টেস্ট সমূহ</a>
+                    <a class="nav-link" href="{{ url('/show_test') }}">ইনভেস্টিগেশন</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_package') }}">আমাদের প্যাকেজ সমূহ</a>
@@ -524,15 +524,15 @@ border-bottom: 1px solid #e0e0e0;
             <div class="card job-card">
                 <div class="card-body">
                     <img src="uploads/others/image_c.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
-                    <h4 class="card-title text-center font-weight-bold">ম্যানেজিং ডিরেক্টর</h4>
+                    <h4 class="card-title text-center font-weight-bold">চেয়ারম্যান ও স্বত্বাধিকারী</h4>
                     <br>
                     <p class="card-text">প্রিয় রোগী ও সেবাগ্রহীতা,</p>
                     <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্সে আপনাকে স্বাগতম। আমাদের লক্ষ্য সঠিক এবং নির্ভুল স্বাস্থ্যসেবা প্রদান করা। অত্যাধুনিক ডায়াগনস্টিক সুবিধা এবং দক্ষ চিকিৎসক দলের মাধ্যমে আমরা নিশ্চিত করি যেন প্রতিটি রোগী নির্ভুল ও সময়োপযোগী সেবা পায়।</p>
                     <p class="card-text">আমরা সবসময় রোগীর সুস্থতা, আরাম ও মানসিক শান্তিকে সর্বাধিক গুরুত্ব দিয়ে থাকি। প্রতিটি রোগীকে আমরা শ্রদ্ধা, যত্ন এবং পেশাদারিত্বের সঙ্গে সেবা প্রদান করি। আপনাদের আস্থা এবং সহযোগিতার জন্য ধন্যবাদ।</p>
                     <p class="card-text">শুভেচ্ছান্তে,</p>
-                    <p class="card-text">মিসেস জোহরা বেগম</p>
-                    <p class="card-text">ম্যানেজিং ডিরেক্টর</p>
-                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্স।</p>
+                    <p class="card-text">মিসেস জোহরা বাকের</p>
+                    <p class="card-text">চেয়ারম্যান ও স্বত্বাধিকারী</p>
+                    <p class="card-text">সন্ধ্যানি ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্স।</p>
                 </div>
             </div>
         </div>
@@ -541,15 +541,15 @@ border-bottom: 1px solid #e0e0e0;
             <div class="card job-card">
                 <div class="card-body">
                     <img src="uploads/others/image_a.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
-                    <h4 class="card-title text-center font-weight-bold">ডিরেক্টর (ডায়াগনস্টিক)</h4>
+                    <h4 class="card-title text-center font-weight-bold">ব্যবস্থাপনা পরিচালক</h4>
                     <br>
                     <p class="card-text">প্রিয় রোগী ও সেবাগ্রহীতা,</p>
                     <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্সে আপনাকে স্বাগত জানাই। আমাদের ডায়াগনস্টিক শাখায় আমরা সর্বাধুনিক প্রযুক্তির যন্ত্রপাতি এবং অভিজ্ঞ টিমের মাধ্যমে সঠিক ও নির্ভুল পরীক্ষা-নিরীক্ষা সেবা প্রদান করি। রোগ নির্ণয় হলো সঠিক চিকিৎসার প্রথম ধাপ, আর আমরা সেই দায়িত্ব অত্যন্ত যত্ন সহকারে পালন করি।</p>
                     <p class="card-text">আমাদের লক্ষ্য হলো প্রতিটি রোগীকে দ্রুত ও নির্ভুল ফলাফল প্রদান করা, যেন চিকিৎসার প্রতিটি ধাপ সহজ ও কার্যকর হয়। আপনাদের আস্থা আমাদের প্রেরণা। ধন্যবাদ।</p>
                     <p class="card-text">শুভেচ্ছান্তে,</p>
                     <p class="card-text">ডা. নাইম  বাকের </p>
-                    <p class="card-text">ডিরেক্টর (ডায়াগনস্টিক)</p>
-                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্স।</p>
+                    <p class="card-text">ব্যবস্থাপনা পরিচালক</p>
+                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্স।</p>
                 </div>
             </div>
         </div>
@@ -558,15 +558,15 @@ border-bottom: 1px solid #e0e0e0;
             <div class="card job-card">
                 <div class="card-body">
                     <img src="uploads/others/image_b.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
-                    <h4 class="card-title text-center font-weight-bold">ডিরেক্টর (ক্লিনিক)</h4>
+                    <h4 class="card-title text-center font-weight-bold">সিইও</h4>
                     <br>
                     <p class="card-text">প্রিয় রোগী ও সেবাগ্রহীতা,</p>
                     <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্সে আপনাকে স্বাগত জানাই। আমাদের ক্লিনিকে, রোগীর সুস্থতা ও যত্নকে সর্বোচ্চ গুরুত্ব দেওয়া হয়। আমরা অত্যাধুনিক প্রযুক্তি ও অভিজ্ঞ চিকিৎসক দলের মাধ্যমে সেবা প্রদান করি, যাতে প্রতিটি রোগী নির্ভুল চিকিৎসা এবং আরামদায়ক সেবা পান।</p>
                     <p class="card-text">আমাদের উদ্দেশ্য হলো সঠিক সময়ে সঠিক সেবা নিশ্চিত করা এবং প্রতিটি রোগীর প্রয়োজন মেটানো। আপনাদের আস্থা আমাদের প্রেরণা। আপনাদের পাশে থেকে সর্বোচ্চ মানের স্বাস্থ্যসেবা প্রদানে আমরা প্রতিশ্রুতিবদ্ধ।</p>
                     <p class="card-text">শুভেচ্ছান্তে,</p>
                     <p class="card-text">ডা. আরমান বাকের</p>
-                    <p class="card-text">ডিরেক্টর (ক্লিনিক)</p>
-                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্স।</p>
+                    <p class="card-text">সিইও</p>
+                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্স।</p>
                 </div>
             </div>
         </div>
@@ -578,7 +578,7 @@ border-bottom: 1px solid #e0e0e0;
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6">
-            <img src="uploads/others/image_d.jpg" alt="story" class="img-fluid rounded-hover ">
+            <img src="uploads/others/sandhani_front.jpg" alt="story" class="img-fluid rounded-hover ">
         </div>
         <div class="col-md-6">
             <div class="card job-card">
@@ -586,7 +586,7 @@ border-bottom: 1px solid #e0e0e0;
                     <h4 class="card-title font-weight-bold text-center">আমাদের ইতিহাস</h4>
                 </div>
                 <div class="card-body">
-                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্সে আপনাকে স্বাগত। ১৯৯২ সালে প্রতিষ্ঠিত, আমাদের লক্ষ্য অত্যাধুনিক প্রযুক্তি এবং সহানুভূতিশীল যত্নের সমন্বয়ে অনন্য স্বাস্থ্যসেবা প্রদান করা। আমরা সঠিক ডায়াগনস্টিক ও ব্যক্তিগত চিকিৎসার মাধ্যমে আপনার প্রত্যাশা পূরণের জন্য সর্বদা সচেষ্ট।
+                    <p class="card-text">সন্ধানী ক্লিনিক ও ডায়াগনস্টিক কমপ্লেক্সে আপনাকে স্বাগত। ১৯৯১ সালে প্রতিষ্ঠিত, আমাদের লক্ষ্য অত্যাধুনিক প্রযুক্তি এবং সহানুভূতিশীল যত্নের সমন্বয়ে অনন্য স্বাস্থ্যসেবা প্রদান করা। আমরা সঠিক ডায়াগনস্টিক ও ব্যক্তিগত চিকিৎসার মাধ্যমে আপনার প্রত্যাশা পূরণের জন্য সর্বদা সচেষ্ট।
                     </p>
                     <p class="card-text">আমাদের অত্যাধুনিক সুবিধাসমূহ ও সেবাগুলো দক্ষ পেশাদার দলের দ্বারা পরিচালিত, যারা সব সময় আপনার আরাম ও সুস্থতাকে অগ্রাধিকার দেন। সন্ধানীতে, আমরা প্রতিটি ভিজিটকে ইতিবাচক অভিজ্ঞতা হিসেবে গড়ে তোলার জন্য এবং নির্ভরযোগ্য সেবা প্রদানে প্রতিশ্রুতিবদ্ধ।
                     </p>

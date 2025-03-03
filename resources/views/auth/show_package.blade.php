@@ -113,10 +113,10 @@ body {
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_test') }}">Test</a>
+                    <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctor</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_gallery') }}">Gallery</a>

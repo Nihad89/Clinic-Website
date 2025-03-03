@@ -9,92 +9,86 @@
     <link rel="stylesheet" href="{{asset ('css/nav_foot.css')}}">
 
     <style>
-        body {
-            background-color: #f8f9fa;
-        }
-        .container {
-            margin-top: 30px;
-            margin-bottom: 30px;
-            
-            
-        }
-        .card {
-            margin-bottom: 20px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: none;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .card-body {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            
-        }
+    body {
+        background-color: #f8f9fa;
+    }
 
-        .col-md-3 {
-            padding-bottom: 20px; /* Adds space between rows */
-        }
+    .container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 
-        .card-img-top {
-            width: 100%;
-            height: auto; 
-            object-fit: cover; 
-            transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
-        }
+    .card {
+        margin-bottom: 20px;
+        height: 100%; 
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Align content vertically */
+        border: none;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    }
 
-        .card-img-top:hover {
-            transform: scale(1.1); /* Scales the image slightly on hover */
-            filter: brightness(0.9); /* Optional: darkens the image slightly on hover */
-        }
+    .card-body {
+        flex-grow: 1; /* Allow the card body to grow and fill the remaining space */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Align content vertically */
+    }
 
-        .card-img-top:hover {
-            transform: scale(1.1);
-            filter: grayscale(50%) brightness(1.2); 
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
-        }
+    .col-md-3 {
+        padding-bottom: 20px; /* Adds space between rows */
+    }
 
-        .col-md-8.mx-auto {
-            
-            justify-content: center;
-        }
+    .card-img-top {
+        width: 100%; 
+        height: 300px; /* Fixed Height  */
+        object-fit: cover; 
+        transition: transform 0.3s ease-in-out; 
+    }
 
+    .card-img-top:hover {
+        transform: scale(1.1); 
+        filter: brightness(0.9); /* darkens the image slightly on hover */
+    }
 
-        .card-header {
-            background-color: #007BFF;
-            color: #fff;
-        }
-        .card-title {
-            margin-bottom: 0;
-        }
-        .btn-back {
-            background-color: #DC3545;
-        }
-        .btn-back:hover {
-            background-color: #C82333;
-        }
-        .form-group label {
-            font-weight: bold;
-        }
-        .form-control {
-            border: 1px solid #ced4da;
-        }
-        .form-control:focus {
-            border-color: #007BFF;
-            box-shadow: none;
-        }
-        .btn-primary {
-            background-color: #007BFF;
-        }
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
+    .card-header {
+        background-color: #007BFF;
+        color: #fff;
+    }
 
-    </style>
+    .card-title {
+        margin-bottom: 0;
+    }
+
+    .btn-back {
+        background-color: #DC3545;
+    }
+
+    .btn-back:hover {
+        background-color: #C82333;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .form-control {
+        border: 1px solid #ced4da;
+    }
+
+    .form-control:focus {
+        border-color: #007BFF;
+        box-shadow: none;
+    }
+
+    .btn-primary {
+        background-color: #007BFF;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+</style>
 </head>
 <body>
 
@@ -141,7 +135,7 @@
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
             <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/show_test') }}">Test</a>
+                    <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/show_package') }}">Our Packages</a>
@@ -181,14 +175,8 @@
                     <input type="text" id="nameFilter" class="form-control" onkeyup="filterByName()">
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="symptomFilter">Search by Symptom:</label>
-                    <input type="text" id="symptomFilter" class="form-control" onkeyup="filterBySymptom()">
-                </div>
-            </div>
 
-            <div class="col-md-8 mx-auto">
+            <div class="col-md-6 mx-auto">
             <div class="form-group">
                 <label for="specialityFilter">Search by Specialty:</label>
                 <select id="specialityFilter" class="form-control" onchange="filterBySpeciality()">
@@ -196,7 +184,6 @@
                 </select>
             </div>
         </div>
-
 
         </div>
 
@@ -213,8 +200,8 @@
             <div class="card-body">
     <h5 class="card-title">{{ $item->name }}</h5>
     <p class="card-text"><strong>Specialty:</strong> {{ $item->specialty }}</p>
-    <p class="card-text"><strong>Degree / Qualification:</strong> {{ $item->degree }}</p>
-    <p class="card-text"><strong>Symptom / Designation:</strong> {{ $item->symptom }}</p>
+    <p class="card-text"><strong>Degree:</strong> {{ $item->degree }}</p>
+    <p class="card-text"><strong>Designation:</strong> {{ $item->symptom }}</p>
     <p class="card-text"><strong>Visiting Days:</strong> {{ $item->day }}</p>
     <p class="card-text"><strong>Visiting Hours:</strong> {{ $item->time }}</p>
     <p class="card-text"><strong>Call for Appointment:</strong> {{ $item->phone }}</p>
@@ -284,9 +271,7 @@ function filterByName() {
 }
 
 // Function to filter cards by symptom
-function filterBySymptom() {
-    applyFilters(); 
-}
+
 
 // Function to filter cards by specialty
 function filterBySpeciality() {
@@ -296,20 +281,17 @@ function filterBySpeciality() {
 // Master function to apply all filters together
 function applyFilters() {
     var nameFilter = document.getElementById("nameFilter").value.toUpperCase();
-    var symptomFilter = document.getElementById("symptomFilter").value.toUpperCase();
     var specialityFilter = document.getElementById("specialityFilter").value.toUpperCase();
     var cards = document.querySelectorAll(".doctor-card");
 
     cards.forEach(function(card) {
         var cardName = card.querySelector(".card-title").textContent.toUpperCase();
-        var cardSymptom = card.querySelector(".card-text:nth-child(4)").textContent.toUpperCase();
         var cardSpeciality = card.querySelector(".card-text:nth-child(2)").textContent.split(": ")[1].toUpperCase();
 
         var matchesName = cardName.indexOf(nameFilter) > -1;
-        var matchesSymptom = cardSymptom.indexOf(symptomFilter) > -1;
         var matchesSpeciality = specialityFilter === "" || cardSpeciality.indexOf(specialityFilter) > -1;
 
-        if (matchesName && matchesSymptom && matchesSpeciality) {
+        if (matchesName && matchesSpeciality) {
             card.style.display = "flex";
         } else {
             card.style.display = "none";
@@ -346,7 +328,6 @@ function getUniqueSpecialties() {
 // Function to reset the filters and show all cards
 function refreshPage() {
     document.getElementById("nameFilter").value = "";
-    document.getElementById("symptomFilter").value = "";
     document.getElementById("specialityFilter").value = "";
     applyFilters(); // Reapply the filters with empty inputs
 }
@@ -354,7 +335,6 @@ function refreshPage() {
 // Event listeners to call the appropriate filter functions
 window.addEventListener("load", function() {
     document.getElementById("nameFilter").addEventListener("keyup", filterByName);
-    document.getElementById("symptomFilter").addEventListener("keyup", filterBySymptom);
     document.getElementById("specialityFilter").addEventListener("change", filterBySpeciality);
     populateSpecialityDropdown();
 });

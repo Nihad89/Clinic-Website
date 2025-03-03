@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Investigations</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="{{asset ('css/nav_foot.css')}}">
@@ -160,7 +160,7 @@
                     <div class="card-body">
                         <div class="form-row">
                             <div class="form-group col-md-6">
-                                <label for="testNameFilter">Search by Test Name:</label>
+                                <label for="testNameFilter">Search by Investigations Name:</label>
                                 <input type="text" id="testNameFilter" class="form-control" onkeyup="filterTable('testNameFilter', 'name')">
                             </div>
                             <div class="form-group col-md-6">
@@ -174,8 +174,8 @@
                         <table class="table table-bordered table-striped">
                         <thead>
                                 <tr>
-                                    <th>Test Name</th>
-                                    <th>Test Category</th>
+                                    <th>Investigation Name</th>
+                                    <th>Investigation Category</th>
                                     <th>Sample Type</th>
                                     <th>Price Per Unit</th>
                                     <th>Estimated Delivery</th>

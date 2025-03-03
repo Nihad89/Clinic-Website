@@ -223,27 +223,21 @@ body {
 
                 </div>
             </div>
-
             <!-- Contact Details Section -->
             <div class="col-md-4 footer-section">
-                <h5 style="color: #fff; font-size: 24px; margin-bottom: 20px;">Contact Details</h5>
+                <h5>Contact Informations</h5>
                 <div class="contact-details">
-                    <p><i class="fas fa-map-marker-alt" style="color: #5ab5fa;" ></i> 123 Main St, City</p>
-                    <p><i class="fas fa-phone" style="color: #5ab5fa;" ></i> (123) 456-7890</p>
-                    <p><i class="fas fa-envelope" style="color: #5ab5fa;" ></i> example@example.com</p>
+                    <p><i class="fas fa-map-marker-alt" style="color: #5ab5fa;" ></i> Location: 58, Babu Khan Road, Khulna, Bangladesh.</p>
+                    <p><i class="fas fa-phone" style="color: #5ab5fa;" ></i> +8809611871872</p>
+                    <p><i class="fas fa-envelope" style="color: #5ab5fa;" ></i> sandhani.clinic.khulna@gmail.com</p>
                 </div>
             </div>
 
             <!-- Copyright Section -->
             <div class="col-md-4 footer-section"style="text-align: right;">
                 <div class="copyright">
-                    &copy; 2023 Your Company Name
+                    &copy; 2023 Sandhani Clinic & Diagnostic Complex
                 </div>
-                <div class="footer-text" style="color: white; margin-top: 15px; font-size: 14px;">
-                    <p>Developed by Abu Saleh Akash.</p>
-                    
-                </div>
-            </div>
         </div>
     </div>
 </footer>
