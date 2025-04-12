@@ -208,7 +208,7 @@
   
                     <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
 
-                    <a class="nav-link" href="{{ url('/show_job') }}">Career</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
 
                 </div>
             </div>

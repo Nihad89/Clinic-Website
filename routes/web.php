@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 
 // Register and Login Show Blade
-Route::get('/register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+Route::get('/new_register_sandhani_website', 'Auth\RegisterController@showRegistrationForm')->name('register');
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 
 
@@ -33,7 +33,7 @@ Route::get('show_package', [PackageController::class, 'show']);
 Route::get('show_doctor', [DoctorController::class, 'show']);
 Route::get('show_gallery', [GalleryController::class, 'show']);
 Route::get('show_notice', [NoticeController::class, 'show']);
-Route::get('delated_notices', [NoticeController::class, 'auditshow']);
+Route::get('delated_notices', [NoticeController::class, 'auditshow']);  // Admin INFO
 Route::get('about', [BannerController::class, 'about_us']);
 Route::get('contact', [BannerController::class, 'contact_us']);
 

@@ -281,6 +281,12 @@ border-bottom: 1px solid #e0e0e0;
     color: #555;
 }
 
+@keyframes blink {
+    0% { opacity: 1; text-shadow: 0px 0px 8px rgba(7, 55, 99, 0.5); }
+    100% { opacity: 0.7; text-shadow: 0px 0px 20px rgba(7, 55, 99, 0.8); }
+}
+
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .card-img-top {
@@ -380,10 +386,12 @@ border-bottom: 1px solid #e0e0e0;
 </nav>
 
 
-    <div class="marquee-container2">
-        <p><h4>WE CARE, WE DIAGNOSE & WE DELIVER!</h4></p>
-    </div>
+ <!-- MOTO  Section -->
 
+
+ <div class="marquee-container2" style="color: #073763; text-align: center; font-weight: bold; font-size: 3.5em; padding: 10px; margin-top: 1rem; font-family: 'Arial Black', sans-serif;">
+    <h4 style="animation: blink 1.5s infinite alternate;">WE CARE, WE DIAGNOSE & WE DELIVER!</h4>
+</div>
 
  <!-- Banner and Notice Sections -->
  <div class="container">
@@ -523,7 +531,7 @@ border-bottom: 1px solid #e0e0e0;
         <div class="col-md-4">
             <div class="card job-card">
                 <div class="card-body">
-                    <img src="uploads/others/image_c.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
+                    <img src="uploads/others/female_image.jpg" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
                     <h4 class="card-title text-center font-weight-bold">চেয়ারম্যান ও স্বত্বাধিকারী</h4>
                     <br>
                     <p class="card-text">প্রিয় রোগী ও সেবাগ্রহীতা,</p>
@@ -540,7 +548,7 @@ border-bottom: 1px solid #e0e0e0;
         <div class="col-md-4">
             <div class="card job-card">
                 <div class="card-body">
-                    <img src="uploads/others/image_a.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
+                    <img src="uploads/others/male_image.jpg" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
                     <h4 class="card-title text-center font-weight-bold">ব্যবস্থাপনা পরিচালক</h4>
                     <br>
                     <p class="card-text">প্রিয় রোগী ও সেবাগ্রহীতা,</p>
@@ -557,7 +565,7 @@ border-bottom: 1px solid #e0e0e0;
         <div class="col-md-4">
             <div class="card job-card">
                 <div class="card-body">
-                    <img src="uploads/others/image_b.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
+                    <img src="uploads/others/male_image.jpg" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
                     <h4 class="card-title text-center font-weight-bold">সিইও</h4>
                     <br>
                     <p class="card-text">প্রিয় রোগী ও সেবাগ্রহীতা,</p>
@@ -613,7 +621,7 @@ border-bottom: 1px solid #e0e0e0;
   
                     <a class="nav-link" href="{{ url('/contact') }}">যোগাযোগ করুন</a>
 
-                    <a class="nav-link" href="{{ url('/show_job') }}">ক্যারিয়ার</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">ডাক্তার</a>
 
                 </div>
             </div>

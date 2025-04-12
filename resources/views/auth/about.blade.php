@@ -320,11 +320,11 @@
                 <h5 style="color: #fff; font-size: 24px; ">Essential Links</h5>
                 <div class="contact-details">
 
-                    <a class="nav-link" href="{{ url('/about') }}">About Us</a>
+                    <a class="nav-link" href="{{ url('/show_test') }}">Investigations</a>
   
                     <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
 
-                    <a class="nav-link" href="{{ url('/show_job') }}">Career</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
 
                 </div>
             </div>

@@ -286,8 +286,14 @@
         font-size: 0.8rem;
     }
 }
+/* Responsive Adjustments for MOTO BLINK */
 
-      
+@keyframes blink {
+    0% { opacity: 1; text-shadow: 0px 0px 8px rgba(7, 55, 99, 0.5); }
+    100% { opacity: 0.7; text-shadow: 0px 0px 20px rgba(7, 55, 99, 0.8); }
+}
+
+
     </style>
 </head>
 <body>
@@ -375,10 +381,11 @@
     </div>
 </nav>
 
+ <!-- MOTO  Section -->
 
-    <div class="marquee-container2">
-        <p><h4>WE CARE, WE DIAGNOSE & WE DELIVER!</h4></p>
-    </div>
+<div class="marquee-container2" style="color: #073763; text-align: center; font-weight: bold; font-size: 3.5em; padding: 10px; margin-top: 1rem; font-family: 'Arial Black', sans-serif;">
+    <h4 style="animation: blink 1.5s infinite alternate;">WE CARE, WE DIAGNOSE & WE DELIVER!</h4>
+</div>
 
 
  <!-- Banner  Section -->
@@ -516,7 +523,7 @@
             <div class="col-md-4">
                 <div class="card job-card">
                     <div class="card-body">
-                        <img src="uploads/others/image_c.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
+                        <img src="uploads/others/female_image.jpg" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
                         <h4 class="card-title text-center font-weight-bold">Chairman & Proprietor</h4>
                         <br>
                         <p class="card-text">Dear Patients and Visitors,</p>
@@ -533,7 +540,7 @@
         <div class="col-md-4">
             <div class="card job-card">
                 <div class="card-body">
-                    <img src="uploads/others/image_a.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
+                    <img src="uploads/others/male_image.jpg" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
                     <h4 class="card-title text-center font-weight-bold">Managing Director</h4>
                     <br>
                     <p class="card-text">Dear Patients and Visitors,</p>
@@ -550,7 +557,7 @@
         <div class="col-md-4">
             <div class="card job-card">
                 <div class="card-body">
-                    <img src="uploads/others/image_b.png" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
+                    <img src="uploads/others/male_image.jpg" alt="message" class="img-fluid rounded-circle mb-4" style="max-width: 300px;">
                     <h4 class="card-title text-center font-weight-bold">CEO</h4>
                     <br>
                     <p class="card-text">Dear Patients and Visitors,</p>
@@ -604,7 +611,7 @@
   
                     <a class="nav-link" href="{{ url('/contact') }}">Contact Us</a>
 
-                    <a class="nav-link" href="{{ url('/show_job') }}">Career</a>
+                    <a class="nav-link" href="{{ url('/show_doctor') }}">Doctors</a>
 
                 </div>
             </div>

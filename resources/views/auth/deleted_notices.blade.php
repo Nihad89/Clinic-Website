@@ -64,7 +64,7 @@
     <!-- Check if there are any deleted notices -->
     @if($deletedNotices->isEmpty())
         <div class="alert alert-info">
-            No deleted notices found.
+           Welcome to Sandhani Clinic & Diagnostic Complex's Admin INFO. Have a Great Day!😊
         </div>
     @else
         @foreach ($deletedNotices as $log)
